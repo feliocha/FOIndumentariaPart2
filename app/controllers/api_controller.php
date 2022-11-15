@@ -64,7 +64,7 @@ class ApiController {
             $this->view->response($articulo);
         }
         else {
-            $this->view->response("La tarea con el id=$id no existe", 404);
+            $this->view->response("El articulo con el id=$id no existe", 404);
         }
     }
 
