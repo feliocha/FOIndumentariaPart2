@@ -8,7 +8,6 @@ $router = new Router();
 // defina la tabla de ruteo
 $router->addRoute('articulos', 'GET', 'ApiController', 'getArticulos');
 $router->addRoute('articulos/:ID', 'GET', 'ApiController', 'getArticulo');
-$router->addRoute('articulos/:ID', 'DELETE', 'ApiController', 'deleteArticulo');
 $router->addRoute('articulos', 'POST', 'ApiController', 'insertArticulo');
 
 // ejecuta la ruta (sea cual sea)

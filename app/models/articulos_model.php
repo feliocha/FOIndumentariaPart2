@@ -48,19 +48,6 @@ class ArticulosModel {
         $query->execute([$nombre, $precio, $id_categoria]);
         return $db->lastInsertId();
     }
-    
-    function deleteArticulo($id) {
-        $db = $this->getDB();
-        $query = $db->prepare("DELETE FROM articulos WHERE id = ?");
-        $query->execute([$id]);
-    }
-
-    function updateArticulo($nombre,$precio,$categoria,$id) {
-        $db = $this->getDB();
-        $query = $db->prepare("UPDATE articulos SET nombre=?, precio=?, id_categoria=? WHERE id=?");
-        $query->execute([$nombre,$precio,$categoria,$id]);
-    }
-
 }
 
 
